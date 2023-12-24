@@ -34,7 +34,7 @@ export const connectWallet = async () => {
 };
 
 const fetchContract = (signerOrProvider) =>
-    new ethers.Contract(ChaintextABI, ChaintextAddress, signerOrProvider);
+    new ethers.Contract(ChaintextAddress, ChaintextABI, signerOrProvider);
 
 export const connectWithContract = async () => {
     try {
