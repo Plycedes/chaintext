@@ -43,7 +43,6 @@ export const connectWithContract = async () => {
         const provider = new ethers.BrowserProvider(connection);
         const signer = provider.getSigner();
         const contract = fetchContract(signer);
-
         return contract;
     } catch (error) {
         console.log(error);

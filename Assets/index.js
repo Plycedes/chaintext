@@ -10,6 +10,7 @@ import clear from "./delete.png";
 import create from "./add.png";
 import dot from "./record.png";
 import loader from "./loader.gif";
+import accountName from "./accountName.png";
 
 export default {
     logo,
@@ -24,4 +25,5 @@ export default {
     create,
     dot,
     loader,
+    accountName,
 };
