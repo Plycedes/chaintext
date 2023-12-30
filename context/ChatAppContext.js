@@ -12,6 +12,7 @@ export const ChatAppProvider = ({ children }) => {
     const [loading, setLoading] = useState(false);
     const [userLists, setUserLists] = useState([]);
     const [error, setError] = useState("");
+    const [test, setTest] = useState("");
 
     const [currentUserName, setCurrentUserName] = useState("");
     const [currentUserAddress, setCurrentUserAddress] = useState("");
@@ -30,6 +31,9 @@ export const ChatAppProvider = ({ children }) => {
 
             const friendLists = await contract.getMyFriendList();
             setFriendList(friendLists);
+
+            const test = await contract.testFunc();
+            setTest(test);
 
             const userLists = await contract.getAllAppUser();
             setUserLists(userLists);
@@ -123,6 +127,7 @@ export const ChatAppProvider = ({ children }) => {
                 error,
                 currentUserName,
                 currentUserAddress,
+                test,
             }}
         >
             {children}

@@ -27,6 +27,7 @@ export const connectWallet = async () => {
         });
 
         const firstAccount = accounts[0];
+        console.log(firstAccount);
         return firstAccount;
     } catch (error) {
         console.log(error);
@@ -43,6 +44,8 @@ export const connectWithContract = async () => {
         const provider = new ethers.BrowserProvider(connection);
         const signer = provider.getSigner();
         const contract = fetchContract(signer);
+        //const conAdd = await contract.testFunc();
+        //console.log(conAdd);
         return contract;
     } catch (error) {
         console.log(error);

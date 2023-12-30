@@ -3,6 +3,8 @@ pragma solidity >=0.7.0 < 0.9.0;
 
 contract Chaintext{
     
+    uint256 test = 10;
+
     struct user{
         string name;
         friend[] friendList;
@@ -102,5 +104,9 @@ contract Chaintext{
 
     function getAllAppUser() public view returns(AllUserStruct[] memory){
         return getAllUsers;
+    }
+
+    function testFunc() public view returns(uint256){
+        return test;
     }
 }

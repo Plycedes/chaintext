@@ -39,7 +39,7 @@ const NavBar = () => {
     const [open, setOpen] = useState(false);
     const [openModel, setOpenModel] = useState(false);
 
-    const { account, userName, connectWallet } = useContext(ChatAppContext);
+    const { account, userName, connectWallet, test } = useContext(ChatAppContext);
     return (
         <div className={Style.NavBar}>
             <div className={Style.NavBar_box}>
@@ -115,6 +115,7 @@ const NavBar = () => {
                                 />
                                 {""}
                                 <small>{userName || "Create Account"}</small>
+                                <p>{test}</p>
                             </button>
                         )}
                     </div>
