@@ -1,12 +1,15 @@
 const hre = require("hardhat");
+const { verify } = require("../utils/verify");
 
 async function main() {
     const chaintext = await hre.ethers.deployContract("Chaintext");
     //const chaintext = await Chaintext.deploy();
 
     await chaintext.waitForDeployment();
-
-    console.log(`Contact Address: ${chaintext.target}`);
+    const address = chaintext.target;
+    console.log(`Contact Address: ${address}`);
+    console.log("Verifying...");
+    await verify(address);
 }
 
 main().catch((error) => {

@@ -44,8 +44,8 @@ export const connectWithContract = async () => {
         const provider = new ethers.BrowserProvider(connection);
         const signer = provider.getSigner();
         const contract = fetchContract(signer);
-        //const conAdd = await contract.testFunc();
-        //console.log(conAdd);
+        const result = await contract.getAllAppUser();
+        console.log(result);
         return contract;
     } catch (error) {
         console.log(error);
