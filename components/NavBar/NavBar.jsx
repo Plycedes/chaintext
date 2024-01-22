@@ -126,16 +126,17 @@ const NavBar = () => {
                 </div>
             </div>
             {/* MODEL COMPONENT */}
-            {!openModel && (
+            {openModel && (
                 <div className={Style.modelBox}>
                     <Model
-                        openModel={setOpenModel}
+                        openBox={setOpenModel}
                         title="WELCOME TO"
                         head="CHAINTEXT"
                         info="Lorem ipsum dolor sit amet"
                         smallInfo="Kindly select your name..."
-                        images={images.hero}
+                        image={images.hero}
                         functionName={createAccount}
+                        address={account}
                     />
                 </div>
             )}

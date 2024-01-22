@@ -5,13 +5,13 @@ import search from "./zoom.png";
 import smile from "./smile.png";
 import send from "./send.png";
 import file from "./file.png";
-import user from "./user.png";
+import username from "./user.png";
 import clear from "./delete.png";
 import create from "./add.png";
 import dot from "./record.png";
 import loader from "./loader.gif";
 import hero from "./hero.png";
-import accountName from "./accountName.png";
+import account from "./accountName.png";
 
 export default {
     logo,
@@ -21,11 +21,11 @@ export default {
     smile,
     send,
     file,
-    user,
+    username,
     clear,
     create,
     dot,
     loader,
     hero,
-    accountName,
+    account,
 };

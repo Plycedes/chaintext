@@ -25,6 +25,11 @@
     transition: all 0.3s ease-in-out;
 }
 
+.NavBar_box_right_menu_items_link {
+    color: #f18303;
+    text-decoration: none;
+}
+
 .active_btn {
     color: #f18303;
     border-bottom: 2px solid #f18303;
@@ -112,7 +117,7 @@
     }
 
     .mobile_menu_items {
-        margin-top: 1rem;
+        margin-top: 5rem;
     }
 
     .mobile_menu_btn {
@@ -125,5 +130,10 @@
     .modelBox {
         position: absolute;
         inset: 0 0 -70% 0%;
+    }
+
+    .mobile_menu_items_link {
+        color: #f18303;
+        text-decoration: none;
     }
 }
