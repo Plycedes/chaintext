@@ -27,7 +27,7 @@ export const connectWallet = async () => {
         });
 
         const firstAccount = accounts[0];
-        console.log(firstAccount);
+        //console.log(firstAccount);
         return firstAccount;
     } catch (error) {
         console.log(error);

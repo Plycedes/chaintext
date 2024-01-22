@@ -25,9 +25,11 @@ export const ChatAppProvider = ({ children }) => {
 
             const connectAccount = await connectWallet();
             setAccount(connectAccount);
+            console.log(connectAccount);
 
-            const userName = await contract.getUserName(connectAccount);
+            const userName = await contract.getUsername(connectAccount);
             setUserName(userName);
+            console.log(userName);
 
             const friendLists = await contract.getMyFriendList();
             setFriendList(friendLists);
@@ -38,7 +40,8 @@ export const ChatAppProvider = ({ children }) => {
             const userLists = await contract.getAllAppUser();
             setUserLists(userLists);
         } catch (error) {
-            setError("Please Install And Connect Your Wallet");
+            setError("error");
+            console.log(error);
         }
     };
     useEffect(() => {
