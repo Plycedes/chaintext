@@ -125,7 +125,7 @@ const NavBar = () => {
                     </div>
                 </div>
             </div>
-            {/* MODEL COMPONENT */}
+            {/* MODEL COMPONENT {error == "" ? "" : <Error error={error} />} */}
             {openModel && (
                 <div className={Style.modelBox}>
                     <Model
@@ -140,7 +140,6 @@ const NavBar = () => {
                     />
                 </div>
             )}
-            {error == "" ? "" : <Error error={error} />}
         </div>
     );
 };
